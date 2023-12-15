@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Plan your day with reliable weather info - Get current conditions, hourly forecasts, and daily forecasts for any location with this weather app. Accurate and easy to use so you can plan your day with confidence.">
+  <meta name="theme-color" content="#0a131f" />
+  <title>Aguamenti</title>
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Fontawesome CSS files -->
+  <link rel="stylesheet" href="css/all.min.css" />
+  <link rel="stylesheet" href="css/fontawesome.min.css" />
+
+  <!-- CSS files -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/navigation-bar.css">
+  <link rel="stylesheet" href="css/weather-info.css">
+  <link rel="stylesheet" href="css/future-forecast.css">
+</head>
+
+<body>
+  <div class="container">
+    <!-- Navigation Bar -->
+    <section class="wrapper" id="navigation-bar">
+      <!-- Navbar Logo -->
+      <button id="logo-container-for-navbar">
+        <img src="./img/umbrella.png" alt="logo" id="navbar-logo" />
+      </button>
+
+      <!-- Navbar links -->
+      <div class="nav-links-container">
+        <button>
+          <a href="/index.html" class="nav-links">
+            <i class="fa-solid fa-cloud-sun-rain active-link"></i>
+            <p class="active-link">Weather</p>
+          </a>
+        </button>
+      </div>
+
+      <!-- Units -->
+      <div class="unit-toggler">
+        <div id="unit-display">
+          Metric
+        </div>
+        <div class="switch-wrapper">
+          <input type="checkbox" id="switch" checked />
+          <label for="switch"></label>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Weather Info and Hourly Forecast -->
+    <section class="wrapper" id="weather-info-hourly-forecast">
+      <!-- Div 1 -->
+      <div class="mi-inner" id="search-bar">
+        <input type="search" name="search" id="search" placeholder="Search for cities" autocomplete="address-level1" />
+        <button id="search-btn">
+          Search
+        </button>
+      </div>
+
+      <!-- Div 2 -->
+      <div class="mi-inner" id="main-weather">
+        <div class="weather-info">
+          <h1>Location Name</h1>
+          <p id="desc-val">Description</p>
+          <p id="chances-precipitation">
+            Precipitation: <span id="chances-precipitation-val"></span>
+          </p>
+          <p id="main-temp">Temp<sup>o</sup></p>
+        </div>
+        <div class="weather-img">
+          <img src="./img/weather-icons/1.png" alt="main weather icon">
+        </div>
+      </div>
+
+      <!-- Div 3 -->
+      <div class="mi-inner" id="today-forecast">
+        <h2>Todays Forecast</h2>
+        <div class="hourly-forecast-container">
+          <div class="hourly-forecast">
+            <p class="hf hf-time">6:00</p>
+            <div class="hf hf-weather-img">
+              <img src="./img/weather-icons/1.png" alt="Weather-image" />
+            </div>
+            <p class="hf hf-temp">25<sup>o</sup></p>
+          </div>
+          <div class="hourly-forecast">
+            <p class="hf hf-time">6:00</p>
+            <div class="hf hf-weather-img">
+              <img src="./img/weather-icons/2.png" alt="Weather-image" />
+            </div>
+            <p class="hf hf-temp">25<sup>o</sup></p>
+          </div>
+          <div class="hourly-forecast">
+            <p class="hf hf-time">6:00</p>
+            <div class="hf hf-weather-img">
+              <img src="./img/weather-icons/3.png" alt="Weather-image" />
+            </div>
+            <p class="hf hf-temp">25<sup>o</sup></p>
+          </div>
+          <div class="hourly-forecast">
+            <p class="hf hf-time">6:00</p>
+            <div class="hf hf-weather-img">
+              <img src="./img/weather-icons/4.png" alt="Weather-image" />
+            </div>
+            <p class="hf hf-temp">25<sup>o</sup></p>
+          </div>
+          <div class="hourly-forecast">
+            <p class="hf hf-time">6:00</p>
+            <div class="hf hf-weather-img">
+              <img src="./img/weather-icons/5.png" alt="Weather-image" />
+            </div>
+            <p class="hf hf-temp">25<sup>o</sup></p>
+          </div>
+          <div class="hourly-forecast">
+            <p class="hf hf-time">6:00</p>
+            <div class="hf hf-weather-img">
+              <img src="./img/weather-icons/6.png" alt="Weather-image" />
+            </div>
+            <p class="hf hf-temp">25<sup>o</sup></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Div 4 -->
+      <div class="mi-inner" id="air-conditions-wrapper">
+        <h2>Air Conditions</h2>
+        <div class="air-conditions-container">
+          <div class="acc-rows">
+            <div class="acc-cols">
+              <div class="acc-cols-head">
+                <i class="fa-solid fa-temperature-half"></i>
+                Feels like
+              </div>
+              <div class="ac-vals" id="feels-like-val">41<sup>o</sup></div>
+            </div>
+            <div class="acc-cols">
+              <div class="acc-cols-head">
+                <i class="fa-solid fa-wind"></i>
+                Wind
+              </div>
+              <div class="ac-vals" id="wind-val">0.2 m/s</div>
+            </div>
+          </div>
+          <div class="acc-rows">
+            <div class="acc-cols">
+              <div class="acc-cols-head">
+                <i class="fa-solid fa-eye"></i>
+                Visibility
+              </div>
+              <div class="ac-vals" id="visibility-val">1 meters</div>
+            </div>
+            <div class="acc-cols">
+              <div class="acc-cols-head">
+                <i class="fa-solid fa-umbrella"></i>
+                Pressure
+              </div>
+              <div class="ac-vals" id="pressure-val">12.5</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Daily Forecast -->
+    <section class="wrapper" id="daily-forecast">
+      <h2>Future Forecast</h2>
+      <div id="daily-forecast-container">
+        <div class="ff-each-day">
+          <div class="ff-weekday-name">
+            Today
+          </div>
+          <div class="ff-weather-img-desc">
+            <img src="./img/weather-icons/20.png" alt="weather-icon">
+            <div class="ff-img-desc">Sunny</div>
+          </div>
+          <div class="ff-temp-min-max">
+            <span class="ff-min-temp">30</span> &hyphen; <span class="ff-max-temp">34</span>
+          </div>
+        </div>
+        <div class="ff-each-day">
+          <div class="ff-weekday-name">
+            Today
+          </div>
+          <div class="ff-weather-img-desc">
+            <img src="./img/weather-icons/20.png" alt="weather-icon">
+            <div class="ff-img-desc">Sunny</div>
+          </div>
+          <div class="ff-temp-min-max">
+            <span class="ff-min-temp">30</span> &hyphen; <span class="ff-max-temp">34</span>
+          </div>
+        </div>
+        <div class="ff-each-day">
+          <div class="ff-weekday-name">
+            Today
+          </div>
+          <div class="ff-weather-img-desc">
+            <img src="./img/weather-icons/20.png" alt="weather-icon">
+            <div class="ff-img-desc">Sunny</div>
+          </div>
+          <div class="ff-temp-min-max">
+            <span class="ff-min-temp">30</span> &hyphen; <span class="ff-max-temp">34</span>
+          </div>
+        </div>
+        <div class="ff-each-day">
+          <div class="ff-weekday-name">
+            Today
+          </div>
+          <div class="ff-weather-img-desc">
+            <img src="./img/weather-icons/20.png" alt="weather-icon">
+            <div class="ff-img-desc">Sunny</div>
+          </div>
+          <div class="ff-temp-min-max">
+            <span class="ff-min-temp">30</span> &hyphen; <span class="ff-max-temp">34</span>
+          </div>
+        </div>
+        <div class="ff-each-day">
+          <div class="ff-weekday-name">
+            Today
+          </div>
+          <div class="ff-weather-img-desc">
+            <img src="./img/weather-icons/20.png" alt="weather-icon">
+            <div class="ff-img-desc">Sunny</div>
+          </div>
+          <div class="ff-temp-min-max">
+            <span class="ff-min-temp">30</span> &hyphen; <span class="ff-max-temp">34</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script src="/js/fetchWeather.js"></script>
+  <script src="/js/shortcuts.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+/* ------------------------------------------future forecast -START------------------------------------------ */
+.container #daily-forecast {
+  padding: 1.5vh 10px;
+  width: 300px;
+  margin-left: 5px;
+}
+#daily-forecast h2 {
+  color: var(--text-color);
+  padding: 1.5vh 0;
+  height: 10%;
+}
+#daily-forecast #daily-forecast-container {
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#daily-forecast .ff-each-day {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--text-color-2);
+}
+ #daily-forecast .ff-weather-img-desc {
+  text-align: center;
+}
+ #daily-forecast .ff-weather-img-desc .ff-img-desc {
+  font-size: 13px;
+  font-style: italic;
+}
+/* responsive */
+@media (max-width: 1000px) {
+  .container #daily-forecast {
+    width: 100%;
+    margin: 10px 0;
+  }
+  #daily-forecast .ff-each-day {
+    margin: 10px;
+  }
+}
+/* ------------------------------------------future forecast -END------------------------------------------ */
